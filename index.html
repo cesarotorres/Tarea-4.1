@@ -1,0 +1,40 @@
+<html>
+<head>
+  <!--Tarea 4.1 - Cesar O. Torres -->
+</head>
+  <body>
+<article>
+  <h2>Confirmacion de Eventos</h2>
+  <!--El formulario que sera utilizado-->
+</article>
+<form id="confirm">
+  <input type="text">
+  <input type="button" value="Submit" onclick="createEventListener()">
+</form>
+<!--La funcion de processInput pero un poco alterada al final para cumplir la funcion pedida (5 puntos)-->
+<script>
+  function processInput() {
+var propWidth = 300;
+    
+var propHeight = 100;
+    
+var winLeft = ((screen.width - propWidth) / 2);
+    
+var winTop = ((screen.height - propHeight) / 2);
+    
+var winOptions = "width=300,height=100";
+    
+winOptions += ",left=" + winLeft;
+    
+winOptions += ",top=" + winTop;
+    
+var confirm=window.open("", "Confirm", "width=300,height=100");
+  confirm.document.write("Su direccion ha sido actualizada.");}
+  <!--La funcion de createEventListener (20 puntos)-->
+  function createEventListener(){ window.addEventListener("click",processInput)
+                                 
+  }
+  
+</script>
+  </body>
+</html>
